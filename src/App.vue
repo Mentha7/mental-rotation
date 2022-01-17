@@ -8,16 +8,9 @@
 			This is a sample instructions view.
 			<br />
 			<br />
-			First you will go through two practice trials. The practice trial view
-			uses magpie's forced choice trial input.
+			Add instructions here...
 		</InstructionScreen>
 
-		<InstructionScreen :title="'Configure Key Mapping'">
-			You can set your own keybinding here:
-			<br />
-			<br />
-
-		</InstructionScreen>
 
 		<!-- Here we create screens in a loop for every entry in training_trials -->
 		<template v-for="(trial, i) of training_trials">
@@ -76,11 +69,6 @@ export default {
 		getRandomFixationTime() {
 				return _.sample([300, 250, 200, 350, 150])
 		}
-	},
-	mounted() {
-		this.$magpie.addExpData({
-			same_key: same_key
-		});
 	}
 };
 
